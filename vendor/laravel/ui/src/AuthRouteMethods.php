@@ -15,7 +15,7 @@ class AuthRouteMethods
         return function ($options = []) {
             $namespace = class_exists($this->prependGroupNamespace('Auth\LoginController')) ? null : 'App\Http\Controllers';
 
-            $this->group(['namespace' => $namespace], function() use($options) {
+            $this->group(['namespace' => $namespace], function () use ($options) {
                 // Login Routes...
                 if ($options['login'] ?? true) {
                     $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -28,26 +28,28 @@ class AuthRouteMethods
                 }
 
                 // Registration Routes...
-                if ($options['register'] ?? true) {
-                    $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-                    $this->post('register', 'Auth\RegisterController@register');
-                }
+                // if ($options['register'] ?? true) {
+                //     $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+                //     $this->post('register', 'Auth\RegisterController@register');
+                // }
 
                 // Password Reset Routes...
-                if ($options['reset'] ?? true) {
-                    $this->resetPassword();
-                }
+                // if ($options['reset'] ?? true) {
+                //     $this->resetPassword();
+                // }
 
                 // Password Confirmation Routes...
-                if ($options['confirm'] ??
-                    class_exists($this->prependGroupNamespace('Auth\ConfirmPasswordController'))) {
-                    $this->confirmPassword();
-                }
+                // if (
+                //     $options['confirm'] ??
+                //     class_exists($this->prependGroupNamespace('Auth\ConfirmPasswordController'))
+                // ) {
+                //     $this->confirmPassword();
+                // }
 
                 // Email Verification Routes...
-                if ($options['verify'] ?? false) {
-                    $this->emailVerification();
-                }
+                // if ($options['verify'] ?? false) {
+                //     $this->emailVerification();
+                // }
             });
         };
     }
