@@ -1,0 +1,11 @@
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^infinitedeveloper\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.infinitedeveloper\.com$
+RewriteRule ^/?$ "https\:\/\/www\.infinitedeveloper\.com\/" [R=301,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
