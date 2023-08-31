@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Card;
 use App\Models\Post;;
 
 class PostController extends Controller
@@ -20,8 +21,14 @@ class PostController extends Controller
 
     public function handle_slug($slug)
     {
+        $card = Card::where('link_tag', '=', $slug)->first();
         $post = Post::where('link_tag', '=', $slug)->first();
-        $view = "posts.post-" . $post->view_id;
-        return view($view, compact(['post']));
+        if ($card) {
+            $posts = Post::where('card_id', '=', $card->id)->get();
+            return view('content', compact(['posts', 'card']));
+        } else if ($post) {
+            $view = "posts.post-" . $post->view_id;
+            return view($view, compact(['post']));
+        }
     }
 }

@@ -10,14 +10,14 @@
                         <div class="line-2"></div>
                         <div class="title">{{ $card->name }}</div>
                         <div class="image-wrap">
-                            <img src="{{ asset('images/' . $card->image) }}" alt="" />
+                            <img src="{{ asset('card_images/' . $card->image) }}" alt="" />
                         </div>
                         <div class="description">
                             {{ $card->short_description }}
                         </div>
                         <div class="btn-barx">
                             <div>
-                                <a class="btn btn-primary w-100" href="{{ route($card->link_tag) }}">
+                                <a class="btn btn-primary w-100" href="{{ $card->link_tag }}">
                                     <i class="bi bi-book-fill"></i>
                                     Learn Now
                                 </a>

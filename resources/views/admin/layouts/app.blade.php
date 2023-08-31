@@ -32,7 +32,7 @@
     <div class="container-fluid">
         <div class="row">
             @include('admin.partials.sidebar')
-            <div class="col-md-9 ms-sm-auto col-lg-10 p-0">
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-5 pt-3">
                 @yield('content')
             </div>
         </div>

@@ -11,7 +11,6 @@ use Illuminate\Support\Str;
 
 class AppHelper
 {
-
     public static function instance()
     {
         return new AppHelper();
@@ -19,8 +18,9 @@ class AppHelper
 
     public function get_admin_prefix()
     {
-        $date = Carbon::now();
-        $prefix = $date->toDateString() . "-admin";
-        return $prefix;
+        // $date = Carbon::now();
+        // $prefix = $date->toDateString() . "-admin";
+        // return $prefix;
+        return "admin";
     }
 }

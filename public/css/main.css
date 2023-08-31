@@ -112,9 +112,27 @@ body {
 }
 /* content */
 .content {
-    background: #f3f3f3;
+    background: #edf2f9;
 }
 .content .navbar {
     background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
     box-shadow: 0 2px 10px -3px #000;
+}
+.content .main-cnt {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px -4px #21d4fd;
+    border-top: 1px solid #b4f1ff;
+    border-left: 1px solid #b4f1ff;
+}
+.content .img-wrap img {
+    height: 150px;
+}
+.content .title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
 }

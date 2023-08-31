@@ -35,3 +35,48 @@ body {
     font-weight: 600;
     font-size: 16px;
 }
+/*  */
+.admin-content .title {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(#b721ff 0%, #21d4fd 100%);
+    background-clip: text;
+    margin-bottom: 10px;
+    -webkit-text-fill-color: transparent;
+}
+
+.admin-content .table-wrap {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px -4px #21d4fd;
+    border-top: 1px solid #b4f1ff;
+    border-left: 1px solid #b4f1ff;
+}
+.table > :not(caption) > * > * {
+    background-color: #fff;
+}
+.table-hover > tbody > tr:hover > * {
+    background-color: #f1f8ff;
+}
+.admin-content .forms {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px -4px #21d4fd;
+    border-top: 1px solid #b4f1ff;
+    border-left: 1px solid #b4f1ff;
+}
+.admin-content .forms .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3f3e3e;
+}
+.admin-content .forms .form-control {
+    font-size: 14px;
+    color: #000000;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #e0f9ff;
+}
