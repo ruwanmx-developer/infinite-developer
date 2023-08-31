@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&display=swap");
+:root {
+    --dark-blue: #00167c;
+    --light-blue: #5bc3ff;
+    --light-purple: #af84fd;
+    --purple: #7125ff;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    min-height: 100vh;
+}
+.navbar .navbar-brand {
+    color: var(--dark-blue);
+    font-weight: 800;
+    font-size: 20px;
+}
+.navbar .navbar-brand .s1 {
+    color: var(--dark-blue);
+    background-color: #fff;
+    padding-left: 10px;
+    border: 2px solid #fff;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.navbar .navbar-brand .s2 {
+    color: #fff;
+    background-color: var(--purple);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* home */
+.home .title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    text-align: right;
+}
+.home .desc {
+    text-align: right;
+    color: #e7e7e7;
+}
+.home .head-img {
+    width: 100%;
+}
+/* learn */
+.learn {
+    background: #f3f3f3;
+}
+.learn .navbar {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    box-shadow: 0 2px 10px -3px #000;
+}
+.learn .learn-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px -4px #21d4fd;
+    border-top: 1px solid #b4f1ff;
+    border-left: 1px solid #b4f1ff;
+}
+.learn .title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+}
+.learn .image-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+}
+.learn .image-wrap img {
+    width: 100px;
+}
+.learn .description {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+.learn .learn-card .line-1 {
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    z-index: 5;
+    width: 250px;
+    height: 5px;
+    transform: rotateZ(-45deg);
+    background: linear-gradient(100deg, var(--light-blue), var(--light-purple));
+}
+.learn .learn-card .line-2 {
+    position: absolute;
+    top: 10px;
+    left: -65px;
+    z-index: 5;
+    width: 250px;
+    height: 50px;
+    transform: rotateZ(-45deg);
+    background: linear-gradient(100deg, var(--light-blue), var(--light-purple));
+}
+/* content */
+.content {
+    background: #f3f3f3;
+}
+.content .navbar {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    box-shadow: 0 2px 10px -3px #000;
+}

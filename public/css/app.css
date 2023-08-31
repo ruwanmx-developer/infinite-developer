@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 :root {
-    /* --primary: #a3ff00; */
-    --primary: #8ee000;
-    --primary-dark: #2f4a00;
-    --secondary: #21dc00;
+    --dark-blue: #00167c;
+    --purple: #7125ff;
 }
 html {
     scroll-behavior: smooth;
     user-select: none;
-}
-* {
 }
 .code-toolbar > .toolbar {
     right: 10px !important;
@@ -25,16 +21,12 @@ pre[class*="language-"] {
 }
 body {
     font-family: "Poppins", sans-serif !important;
-    background-image: url("../images/background.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 .navbar {
-    background: #141414;
+    background: transparent;
     box-shadow: 0 5px 5px #0e0d0d;
 }
 .navbar-brand,
@@ -42,9 +34,11 @@ body {
 .navbar-brand:active {
     font-size: 20px;
     font-weight: 700;
-    color: #a9a9a9;
+    color: var(--dark-blue);
 }
-
+.navbar-brand span {
+    color: var(--purple);
+}
 .nav-link {
     color: #4e4e4e;
     font-weight: 600;

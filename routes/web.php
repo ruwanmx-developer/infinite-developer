@@ -16,17 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 $dt = Carbon::now();
 $x = $dt->toDateString() . "-admin";
 
 Route::get('/' . $x, [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/learn', [App\Http\Controllers\HomeController::class, 'learn'])->name('learn');
 
 // laravel card 1

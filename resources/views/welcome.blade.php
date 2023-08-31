@@ -2,9 +2,9 @@
 @section('class', 'home')
 @section('content')
     <div class="container mt-5">
-        <div class="row main-cnt">
-            <div class="col-7 d-flex align-items-center">
-                <div class="w-100 ">
+        <div class="row">
+            <div class="col-6 d-flex align-items-center">
+                <div class="w-100">
                     <div class="title">
                         Your Path to Mastering Coding
                     </div>
@@ -20,23 +20,13 @@
                         into
                         functional, elegant code.
                     </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        <a href="{{ route('learn') }}" class="btn btn-warning">Start Learning</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-6">
                 <img class="head-img" src="{{ asset('images/figure_1.png') }}" alt="Image by vectorpouch on Freepik">
-            </div>
-            <div class="col-12">
-                <div class="social-media-btn-bar">
-                    <div class=" b facebook">
-                        <i class="bi bi-facebook"></i> Facebook
-                    </div>
-                    <div class=" b youtube">
-                        <i class="bi bi-youtube"></i> Youtube
-                    </div>
-                    <div class=" b instagram">
-                        <i class="bi bi-instagram"></i> Instagram
-                    </div>
-                </div>
             </div>
         </div>
     </div>

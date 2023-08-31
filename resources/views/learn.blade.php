@@ -5,7 +5,7 @@
         <div class="row">
             @foreach ($cards as $card)
                 <div class="col-12 col-lg-6 col-xxl-3">
-                    <div class="card-5">
+                    <div class="learn-card">
                         <div class="line-1"></div>
                         <div class="line-2"></div>
                         <div class="title">{{ $card->name }}</div>
@@ -17,7 +17,7 @@
                         </div>
                         <div class="btn-barx">
                             <div>
-                                <a class="button" href="{{ route($card->link_tag) }}">
+                                <a class="btn btn-primary w-100" href="{{ route($card->link_tag) }}">
                                     <i class="bi bi-book-fill"></i>
                                     Learn Now
                                 </a>
