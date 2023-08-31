@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 :root {
     /* --primary: #a3ff00; */
     --primary: #8ee000;
@@ -10,7 +10,6 @@ html {
     user-select: none;
 }
 * {
-    font-family: "Poppins", sans-serif !important;
 }
 .code-toolbar > .toolbar {
     right: 10px !important;
@@ -20,7 +19,12 @@ html {
     background-color: var(--primary) !important;
     color: #000 !important;
 }
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+}
 body {
+    font-family: "Poppins", sans-serif !important;
     background-image: url("../images/background.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,6 +136,7 @@ body {
 .post .title-1 {
     font-size: 20px;
     font-weight: 600;
+    margin-top: 30px;
     color: var(--primary);
     text-transform: capitalize;
 }
@@ -139,16 +144,16 @@ body {
     content: "# ";
 }
 .post .desc {
-    padding-top: 10px;
     line-height: 19px;
 }
 .post .desc::before {
     content: "# ";
     color: var(--secondary);
 }
-.post .desc .fname {
+.post .desc span {
     font-weight: 600;
     color: var(--primary);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
 }
 
 /* learn */
