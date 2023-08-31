@@ -17,12 +17,12 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-12">
                 <div class="page">
                     @foreach ($posts as $post)
                         <div>
-                            <a href="{{ $post->link_tag }}">
+                            <a href="{{ $post->link_tag }}" class="link-tag">
                                 {{ $post->name }}
                             </a>
                         </div>

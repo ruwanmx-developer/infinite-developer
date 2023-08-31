@@ -11,6 +11,26 @@ body {
     background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
     min-height: 100vh;
 }
+
+/* code format */
+.code-toolbar > .toolbar {
+    right: 10px !important;
+    opacity: 1 !important;
+}
+.code-toolbar > .toolbar > .toolbar-item > button:hover {
+    background-color: var(--primary) !important;
+    color: #000 !important;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+}
+/* navbar */
+
+.navbar {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    box-shadow: 0 2px 10px -3px #000;
+}
 .navbar .navbar-brand {
     color: var(--dark-blue);
     font-weight: 800;
@@ -49,13 +69,6 @@ body {
     width: 100%;
 }
 /* learn */
-.learn {
-    background: #edf2f9;
-}
-.learn .navbar {
-    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
-    box-shadow: 0 2px 10px -3px #000;
-}
 .learn .learn-card {
     background-color: #fff;
     padding: 20px;
@@ -112,7 +125,7 @@ body {
 }
 /* content */
 .content {
-    background: #edf2f9;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 }
 .content .navbar {
     background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
@@ -129,10 +142,68 @@ body {
     border-left: 1px solid #b4f1ff;
 }
 .content .img-wrap img {
-    height: 150px;
+    height: 100px;
 }
 .content .title {
     font-size: 30px;
     font-weight: 600;
     color: #000;
+}
+.content .link-tag {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.content .link-tag:hover {
+    color: #000;
+}
+.content .link-tag::before {
+    content: "# ";
+}
+/* post */
+
+.post .post-cnt {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px -4px #21d4fd;
+    border-top: 1px solid #b4f1ff;
+    border-left: 1px solid #b4f1ff;
+}
+.post .img-wrap {
+    height: 50px;
+}
+.post .img-wrap img {
+    height: 100%;
+}
+.post .title {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+.post .title-1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--dark-blue);
+    text-transform: capitalize;
+}
+.post .title-1:first-of-type {
+    margin-top: 0 !important;
+}
+.post .title-1::before {
+    content: "# ";
+}
+.post .desc {
+    line-height: 19px;
+}
+
+.post .desc span {
+    font-weight: 600;
+    color: var(--primary);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
 }
