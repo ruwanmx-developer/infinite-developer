@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('meta_description', $card->page_meta_data)
-@section('page_title', 'Infinite Developer | ' . $card->name)
+@section('meta_description', 'Infinite Developer | Search')
+@section('page_title', 'Infinite Developer | Search')
 @section('class', 'content')
 @section('content')
     <div class="container-fluid">
         <div class="row py-5 px-5">
             <div class="col-3 side">
-                <img src="{{ asset('card_images/' . $card->image) }}" alt="">
+                {{-- <img src="{{ asset('card_images/' . $card->image) }}" alt="">
                 <div>
                     <div class="main-title">
                         {{ $card->name }}
@@ -14,7 +14,7 @@
                     <div class="description">
                         {{ $card->long_description }}
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="col-9">
                 <div class="row">

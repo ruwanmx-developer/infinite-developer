@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50);
+            $table->string('name', 300);
             $table->string('image', 50);
-            $table->string('short_description', 200);
+            $table->string('short_description', 300);
             $table->string('long_description', 600);
-            $table->string('page_meta_data', 200);
-            $table->string('link_tag', 200);
+            $table->string('page_meta_data', 300);
+            $table->string('link_tag', 300);
             $table->timestamps();
         });
     }

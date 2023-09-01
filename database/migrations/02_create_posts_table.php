@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 150);
+            $table->string('name', 300);
             $table->string('view_id', 10);
-            $table->string('page_meta_data', 200);
-            $table->string('link_tag', 200);
+            $table->string('page_meta_data', 300);
+            $table->string('link_tag', 300);
             $table->string('description', 600);
             $table->bigInteger('card_id');
             $table->timestamps();

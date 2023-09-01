@@ -7,8 +7,9 @@
         @csrf
         <div class="row gy-3">
             <div class="col-md-6">
-                <label for="name" class="form-label mb-0">Post Title</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label id="l_name" for="name" class="form-label mb-0">Post Title</label>
+                <input oninput="validate_field(this,'l_name','Post Title')" type="text" class="form-control"
+                    id="name" name="name" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
@@ -23,20 +24,23 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="page_meta_data" class="form-label mb-0">Post Page Meta Data</label>
-                <input type="text" class="form-control" id="page_meta_data" name="page_meta_data" required>
+                <label id="l_page_meta_data" for="page_meta_data" class="form-label mb-0">Post Page Meta Data</label>
+                <input oninput="validate_field(this,'l_page_meta_data','Post Page Meta Data')" type="text"
+                    class="form-control" id="page_meta_data" name="page_meta_data" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="link_tag" class="form-label mb-0">Post Link Tag</label>
-                <input type="text" class="form-control" id="link_tag" name="link_tag" required>
+                <label id="l_link_tag" for="link_tag" class="form-label mb-0">Post Link Tag</label>
+                <input oninput="validate_field(this,'l_link_tag','Post Link Tag')" type="text" class="form-control"
+                    id="link_tag" name="link_tag" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="description" class="form-label mb-0">Description</label>
-                <input type="text" class="form-control" id="description" name="description" required>
+                <label id="l_description" for="description" class="form-label mb-0">Description</label>
+                <input oninput="validate_field(this,'l_description','Description')" type="text" class="form-control"
+                    id="description" name="description" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
@@ -45,4 +49,9 @@
             </div>
         </div>
     </form>
+    <script>
+        function validate_field(data, label_id, label) {
+            document.getElementById(label_id).innerHTML = label + " \(" + data.value.length + "\)";
+        }
+    </script>
 @endsection

@@ -131,10 +131,9 @@ pre[class*="language-"] {
 .content {
     background-image: radial-gradient(#e9e9e9 0.5px, #37475c 0.5px);
     background-size: 10px 10px;
-    /* background: #e9e9e9; */
 }
 .content .side {
-    background-color: #e6e6e6;
+    background: #ffffff;
     padding: 20px;
     text-align: left;
     border-radius: 5px;
@@ -166,8 +165,7 @@ pre[class*="language-"] {
     border-radius: 5px;
     position: relative;
     display: flex;
-    max-height: 90px;
-    background-color: #ffffffb6;
+    background-color: #ffffff8c;
     border-radius: 5px;
     box-shadow: 0 0 7px -3px #000000;
     transition: 0.25s all;
@@ -175,10 +173,12 @@ pre[class*="language-"] {
 .content .content-card:hover {
     box-shadow: 0 0 14px -10px #000000;
     padding: 30px;
-    max-height: 130px;
+    background-color: #fff;
 }
 .content .content-card .sec {
-    width: 20px;
+    width: 10px;
+    max-width: 10px;
+    min-width: 10px;
     height: 100;
     border-radius: 5px;
     margin-right: 10px;
@@ -216,6 +216,7 @@ pre[class*="language-"] {
 .content .content-card .title {
     color: #000;
     font-size: 16px;
+    font-weight: 600;
 }
 .content .content-card .desc {
     color: #000;
@@ -231,7 +232,7 @@ pre[class*="language-"] {
     background-size: 10px 10px;
 }
 .post .post-cnt {
-    background-color: #d6d6d6;
+    background-color: #ececec;
     backdrop-filter: blur(2px);
     padding: 20px;
     border-radius: 5px;

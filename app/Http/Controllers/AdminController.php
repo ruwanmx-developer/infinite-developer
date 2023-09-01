@@ -108,7 +108,6 @@ class AdminController extends Controller
     {
         $post = Post::find($request->id);
         $post->name = $request->name;
-        $post->view_id = $request->view_id;
         $post->card_id = $request->card_id;
         $post->page_meta_data = $request->page_meta_data;
         $post->description = $request->description;

@@ -10,12 +10,12 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             </ul>
-            <form action="#" method="get" class="dflex">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search in the Site">
-                    <span class="input-group-text"><i class="bi bi-search"></i></span>
-                </div>
-            </form>
+            <div class="d-flex">
+                <form class="input-group d-flex" action="{{ route('search') }}" method="GET">
+                    <input type="text" class="form-control" placeholder="Search in the Site" name="key">
+                    <button class="input-group-text" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
         </div>
     </div>
 </nav>
