@@ -158,8 +158,7 @@ pre[class*="language-"] {
 .content .link-tag:hover {
     color: #000;
 }
-.content .link-tag::before {
-    content: "# ";
+.content .cotent-card {
 }
 /* post */
 

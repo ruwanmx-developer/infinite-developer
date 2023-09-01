@@ -16,6 +16,7 @@ class Post extends Model
         'page_meta_data',
         'link_tag',
         'card_id',
+        'description',
     ];
 
     public function card(): BelongsTo

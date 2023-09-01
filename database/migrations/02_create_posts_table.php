@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('view_id', 3);
             $table->string('page_meta_data', 200);
             $table->string('link_tag', 200);
+            $table->string('description', 600);
             $table->bigInteger('card_id');
             $table->timestamps();
         });

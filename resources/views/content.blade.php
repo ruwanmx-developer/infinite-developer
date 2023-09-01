@@ -21,11 +21,12 @@
             <div class="col-12">
                 <div class="page">
                     @foreach ($posts as $post)
-                        <div>
-                            <a href="{{ $post->link_tag }}" class="link-tag">
-                                {{ $post->name }}
-                            </a>
-                        </div>
+                        <a href="{{ $post->link_tag }}" class="link-tag">
+                            <div class="content-card">
+                                <div class="title">{{ $post->name }}</div>
+                                <div class="desc">{{ $post->description }}</div>
+                            </div>
+                        </a>
                     @endforeach
                 </div>
             </div>

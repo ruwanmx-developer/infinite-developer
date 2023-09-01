@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\AppHelper;
 use App\Models\Card;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -84,12 +85,14 @@ class AdminController extends Controller
 
     public function posts_create(Request $request)
     {
+        $number = AppHelper::instance()->genarate_view_id();
         Post::create([
             'name' => $request->name,
-            'view_id' => $request->view_id,
+            'view_id' => $number,
             'page_meta_data' => $request->page_meta_data,
             'link_tag' => $request->link_tag,
             'card_id' => $request->card_id,
+            'description' => $request->description,
         ]);
         return redirect()->route('posts.index');
     }
@@ -108,6 +111,7 @@ class AdminController extends Controller
         $post->view_id = $request->view_id;
         $post->card_id = $request->card_id;
         $post->page_meta_data = $request->page_meta_data;
+        $post->description = $request->description;
         $post->link_tag = $request->link_tag;
         $post->save();
         return redirect()->route('posts.index');

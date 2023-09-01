@@ -23,12 +23,6 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="view_id" class="form-label mb-0">View Id</label>
-                <input type="text" class="form-control" id="view_id" name="view_id" required>
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
                 <label for="page_meta_data" class="form-label mb-0">Post Page Meta Data</label>
                 <input type="text" class="form-control" id="page_meta_data" name="page_meta_data" required>
                 <div class="invalid-feedback">
@@ -37,6 +31,12 @@
             <div class="col-md-6">
                 <label for="link_tag" class="form-label mb-0">Post Link Tag</label>
                 <input type="text" class="form-control" id="link_tag" name="link_tag" required>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="description" class="form-label mb-0">Description</label>
+                <input type="text" class="form-control" id="description" name="description" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
