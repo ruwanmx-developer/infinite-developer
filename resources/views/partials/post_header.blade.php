@@ -3,8 +3,8 @@
         <div class="img-wrap">
             <img src="{{ asset('images/' . $post->card->image) }}" alt="">
         </div>
-        <div class="title">
+        <h1 class="title">
             {{ $post->name }}
-        </div>
+        </h1>
     </div>
 </div>

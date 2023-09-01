@@ -2,23 +2,23 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <title>@yield('page_title')</title>
+
+    {{-- meta data --}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@yield('meta_description')">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Infinite Developer') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
     <!-- Scripts -->
-    <link rel="stylesheet" href="{{ asset('build/assets/app-71455456.css') }}">
-    <script src="{{ asset('build/assets/app-ff9b72be.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/assets/app-93daf664.css') }}">
+    <script src="{{ asset('build/assets/app-51e8fec5.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
     <script src="{{ asset('js/prism.js') }}"></script>

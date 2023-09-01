@@ -18,7 +18,7 @@
             <tbody>
                 @foreach ($cards as $card)
                     <tr>
-                        <th scope="row">{{ $card->id }}</th>
+                        <td>{{ $card->id }}</td>
                         <td>{{ $card->name }}</td>
                         <td>{{ $card->image }}</td>
                         <td>{{ $card->page_meta_data }}</td>

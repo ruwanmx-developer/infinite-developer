@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -40,6 +41,7 @@ class AdminController extends Controller
                 'link_tag' =>  $request->link_tag,
             ]);
         }
+        return redirect()->route('cards.index');
     }
 
     public function cards_edit(int $id)
@@ -66,5 +68,48 @@ class AdminController extends Controller
         $card->link_tag = $request->link_tag;
         $card->save();
         return redirect()->route('cards.index');
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+    public function posts()
+    {
+        $posts = Post::all();
+        return view('admin.post.index', compact(['posts']));
+    }
+
+    public function posts_add()
+    {
+        $cards = Card::all();
+        return view('admin.post.add', compact(['cards']));
+    }
+
+    public function posts_create(Request $request)
+    {
+        Post::create([
+            'name' => $request->name,
+            'view_id' => $request->view_id,
+            'page_meta_data' => $request->page_meta_data,
+            'link_tag' => $request->link_tag,
+            'card_id' => $request->card_id,
+        ]);
+        return redirect()->route('posts.index');
+    }
+
+    public function posts_edit(int $id)
+    {
+        $cards = Card::all();
+        $post = Post::find($id);
+        return view('admin.post.edit', compact('post', 'cards'));
+    }
+
+    public function posts_update(Request $request)
+    {
+        $post = Post::find($request->id);
+        $post->name = $request->name;
+        $post->view_id = $request->view_id;
+        $post->card_id = $request->card_id;
+        $post->page_meta_data = $request->page_meta_data;
+        $post->link_tag = $request->link_tag;
+        $post->save();
+        return redirect()->route('posts.index');
     }
 }

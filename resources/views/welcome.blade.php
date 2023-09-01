@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('meta_description',
+    'Learn Programming through an Incredibly Easy Step-by-Step Method from Scratch. Every step
+    has been explained, allowing you to grasp concepts effortlessly and gain comprehensive knowledge.')
+@section('page_title', 'Infinite Developer | Home')
 @section('class', 'home')
 @section('content')
     <div class="container mt-5">
