@@ -14,11 +14,9 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
     <!-- Scripts -->
-    <link rel="stylesheet" href="{{ asset('build/assets/app-71455456.css') }}">
-    <script src="{{ asset('build/assets/app-ff9b72be.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/assets/app-93daf664.css') }}">
+    <script src="{{ asset('build/assets/app-51e8fec5.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
     <script src="{{ asset('js/prism.js') }}"></script>
@@ -26,6 +24,8 @@
     <script src="{{ asset('js/scroll.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+
+
 </head>
 
 <body class="@yield('class')">

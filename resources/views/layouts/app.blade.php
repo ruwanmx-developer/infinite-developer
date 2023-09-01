@@ -26,6 +26,9 @@
     <script src="{{ asset('js/scroll.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+    @yield('styles')
+
 </head>
 
 <body class="@yield('class')">

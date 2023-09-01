@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('image', 50);
-            $table->string('short_description', 150);
+            $table->string('short_description', 200);
             $table->string('long_description', 600);
             $table->string('page_meta_data', 200);
             $table->string('link_tag', 200);

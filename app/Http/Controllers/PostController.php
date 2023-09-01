@@ -27,7 +27,7 @@ class PostController extends Controller
             $posts = Post::where('card_id', '=', $card->id)->get();
             return view('content', compact(['posts', 'card']));
         } else if ($post) {
-            $view = "posts.post-" . $post->view_id;
+            $view = "posts." . $post->view_id;
             return view($view, compact(['post']));
         }
     }
