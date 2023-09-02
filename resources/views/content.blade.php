@@ -4,8 +4,8 @@
 @section('class', 'content')
 @section('content')
     <div class="container-fluid">
-        <div class="row py-5 px-5">
-            <div class="col-3 side">
+        <div class="row p-3 py-md-5 px-md-5">
+            <div class="col-12 col-md-4 side  mb-3 mb-md-0">
                 <img src="{{ asset('card_images/' . $card->image) }}" alt="">
                 <div>
                     <div class="main-title">
@@ -16,10 +16,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-12 col-md-8">
                 <div class="row">
                     @foreach ($posts as $post)
-                        <div class="col-12 mb-3">
+                        <div class="col-12 mb-3 px-0 px-md-3">
                             <a href="{{ $post->link_tag }}" class="link-tag">
                                 <div class="content-card">
                                     <div class="sec c1"></div>

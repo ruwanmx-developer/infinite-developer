@@ -6,7 +6,7 @@
     <div class="container mt-4">
         @include('partials.post_header')
         <div class="row mb-5">
-            <div class="col-10 post-cnt">
+            <div class="col-12 col-xxl-10 post-cnt">
                 <h2 class="title-1">Introduction</h2>
                 <p class="desc"></p>
                 <h2 class="title-1">Create the Database</h2>

@@ -30,6 +30,7 @@
     <script src="{{ asset('js/scroll.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
     @yield('styles')
 

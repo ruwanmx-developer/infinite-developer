@@ -6,7 +6,7 @@
     <div class="container mt-4">
         @include('partials.post_header')
         <div class="row mb-5">
-            <div class="col-10 post-cnt">
+            <div class="col-12 col-xxl-10 post-cnt">
                 <h2 class="title-1">Introduction</h2>
                 <p class="desc">You can use this <span>Session</span> function in php to handle <span>Authentication</span>
                     or <span>Save data temporarily</span>. It's like a simple storage. Session data last until the user

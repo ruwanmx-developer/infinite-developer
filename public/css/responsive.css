@@ -1,0 +1,75 @@
+/* below md */
+@media (max-width: 991.98px) {
+    .air {
+        display: none;
+    }
+    .home .head-img {
+        width: 60%;
+    }
+    .home .desc {
+        text-align: justify;
+    }
+    .home .title {
+        text-align: center;
+    }
+}
+/* mobile devices */
+@media (max-width: 767.98px) {
+    .home .title {
+        line-height: 28px;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .home .head-img {
+        width: 60%;
+    }
+    .air {
+        display: none;
+    }
+    .home .desc {
+        text-align: justify;
+        line-height: 18px;
+    }
+
+    /*  */
+    .learn .learn-card {
+        padding: 10px;
+    }
+    .learn .title {
+        margin-bottom: 5px;
+    }
+    .learn .image-wrap {
+        margin-bottom: 5px;
+    }
+    .learn .image-wrap img {
+        height: 60px;
+    }
+    .learn .description {
+        height: 70px;
+    }
+    /*  */
+    .content .content-card .title {
+        line-height: 17px;
+    }
+    .content .content-card .desc {
+        line-height: 16px;
+        font-weight: 400;
+        font-size: 13px;
+    }
+    /*  */
+    .post .title {
+        font-size: 25px;
+        line-height: 27px;
+    }
+    .post .title-1 {
+        font-size: 18px;
+    }
+    .post .desc {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .code-toolbar {
+        font-size: 12px;
+    }
+}

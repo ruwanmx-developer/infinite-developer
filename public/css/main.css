@@ -103,7 +103,7 @@ pre[class*="language-"] {
     z-index: 10;
 }
 .learn .image-wrap img {
-    width: 100px;
+    height: 100px;
 }
 .learn .description {
     font-size: 14px;

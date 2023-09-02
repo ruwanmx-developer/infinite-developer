@@ -8,7 +8,7 @@
     <div class="container mt-5">
         <div class="row">
             @foreach ($cards as $card)
-                <div class="col-12 col-lg-6 col-xxl-3">
+                <div class="col-12 col-md-6 col-lg-4 col-xxl-3 col-xxl-3">
                     <div class="learn-card">
                         <div class="line-1"></div>
                         <div class="line-2"></div>
