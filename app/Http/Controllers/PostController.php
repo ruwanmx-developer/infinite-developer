@@ -24,6 +24,8 @@ class PostController extends Controller
         } else if ($post) {
             $view = "posts." . $post->view_id;
             return view($view, compact(['post']));
+        } else {
+            return view('page-not-found');
         }
     }
 }
