@@ -11,9 +11,13 @@ body {
     min-height: 100vh;
     background-image: radial-gradient(#ffffff 0.5px, #37475c 0.5px);
     background-size: 10px 10px;
+    user-select: none;
 }
 
 /* code format */
+.code-toolbar {
+    user-select: text !important;
+}
 .code-toolbar > .toolbar {
     right: 10px !important;
     opacity: 1 !important;
@@ -256,10 +260,10 @@ pre[class*="language-"] {
     font-weight: 600;
     margin-bottom: 0;
     margin-top: 30px;
-    color: #1b1b1b;
+    color: #1e90ff;
     text-transform: capitalize;
 }
-.post .title-1:first-of-type {
+.post .title-1:first-child {
     margin-top: 0 !important;
 }
 .post .title-1::before {
@@ -268,10 +272,16 @@ pre[class*="language-"] {
 .post .desc {
     line-height: 19px;
     margin-bottom: 0;
+    color: #2e2e2e;
+    font-weight: 300;
 }
 
 .post .desc span {
-    font-weight: 600;
+    font-weight: 700;
+    user-select: text;
     color: var(--primary);
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+}
+.post .desc span::after,
+.post .desc span::before {
+    content: "'";
 }
