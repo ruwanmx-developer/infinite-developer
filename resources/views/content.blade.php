@@ -3,9 +3,9 @@
 @section('page_title', 'Infinite Developer | ' . $card->name)
 @section('class', 'content')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid x">
         <div class="row p-3 py-md-5 px-md-5">
-            <div class="col-12 col-md-4 side  mb-3 mb-md-0">
+            <div class="col-12 col-md-4 side mb-3 mb-md-0">
                 <img src="{{ asset('card_images/' . $card->image) }}" alt="">
                 <div>
                     <div class="main-title">

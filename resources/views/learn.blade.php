@@ -5,8 +5,8 @@
 @section('page_title', 'Infinite Developer | Learn')
 @section('class', 'learn')
 @section('content')
-    <div class="container mt-5">
-        <div class="row">
+    <div class="container x pt-5">
+        <div class="row mb-5">
             @foreach ($cards as $card)
                 <div class="col-12 col-md-6 col-lg-4 col-xxl-3 col-xxl-3">
                     <div class="learn-card">

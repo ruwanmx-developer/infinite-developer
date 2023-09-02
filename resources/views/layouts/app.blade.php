@@ -39,6 +39,7 @@
 <body class="@yield('class')">
     @include('partials.navigation')
     @yield('content')
+    @include('partials.footer')
 </body>
 
 </html>
