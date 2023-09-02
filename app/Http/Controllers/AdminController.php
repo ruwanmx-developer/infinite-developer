@@ -6,6 +6,7 @@ use App\Helpers\AppHelper;
 use App\Models\Card;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -40,6 +41,7 @@ class AdminController extends Controller
                 'long_description' =>  $request->l_desc,
                 'page_meta_data' =>  $request->page_meta_data,
                 'link_tag' =>  $request->link_tag,
+                'created_by' =>  Auth::user()->id,
             ]);
         }
         return redirect()->route('cards.index');
@@ -93,6 +95,7 @@ class AdminController extends Controller
             'link_tag' => $request->link_tag,
             'card_id' => $request->card_id,
             'description' => $request->description,
+            'created_by' =>  Auth::user()->id,
         ]);
         return redirect()->route('posts.index');
     }

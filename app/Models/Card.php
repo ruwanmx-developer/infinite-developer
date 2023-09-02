@@ -16,5 +16,6 @@ class Card extends Model
         'long_description',
         'page_meta_data',
         'link_tag',
+        'created_by',
     ];
 }

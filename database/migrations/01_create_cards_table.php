@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('long_description', 600);
             $table->string('page_meta_data', 300);
             $table->string('link_tag', 300);
+            $table->smallInteger('created_by');
             $table->timestamps();
         });
     }

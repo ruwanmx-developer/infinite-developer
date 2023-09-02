@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('link_tag', 300);
             $table->string('description', 600);
             $table->bigInteger('card_id');
+            $table->smallInteger('created_by');
             $table->timestamps();
         });
     }

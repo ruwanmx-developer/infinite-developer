@@ -17,6 +17,7 @@ class Post extends Model
         'link_tag',
         'card_id',
         'description',
+        'created_by',
     ];
 
     public function card(): BelongsTo

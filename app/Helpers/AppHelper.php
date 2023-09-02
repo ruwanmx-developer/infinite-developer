@@ -19,10 +19,10 @@ class AppHelper
 
     public function get_admin_prefix()
     {
-        // $date = Carbon::now();
-        // $prefix = $date->toDateString() . "-admin";
-        // return $prefix;
-        return "admin";
+        $date = Carbon::now();
+        $prefix = $date->toDateString() . "-admin";
+        return $prefix;
+        // return "admin";
     }
 
     public function genarate_view_id()
