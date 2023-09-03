@@ -9,14 +9,20 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+
+
     public function index()
     {
         return view('welcome');
+    }
+
+    public function sitemap()
+    {
+        $posts = Post::all();
+        $cards = Card::all();
+        return response()->view('sitemap', [
+            'posts' => $posts, 'cards' => $cards
+        ])->header('Content-Type', 'text/xml');
     }
 
     public function learn()

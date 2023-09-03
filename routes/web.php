@@ -28,5 +28,6 @@ Route::group(['prefix' => AppHelper::instance()->get_admin_prefix()], function (
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/learn', [App\Http\Controllers\HomeController::class, 'learn'])->name('learn');
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
+Route::get('/infinite/d/sitemap.xml', [App\Http\Controllers\HomeController::class, 'sitemap']);
 
 Route::get('/{slug}', [App\Http\Controllers\PostController::class, 'handle_slug']);
