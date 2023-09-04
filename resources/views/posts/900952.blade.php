@@ -107,13 +107,26 @@ start_session();
 
 // check if the 'auth' variable exists in the session storage
 if(array_key_exists('auth', $_SESSION)){
-    // user is authenticated and if you wan the user id
+    // user is authenticated and if you want the user id
     echo $_SESSION['user_id'];
 } else {
     // user is not authenticated
     // redirect to login page or any page
     header('location:login.php');
 }
+
+?></code></pre>
+                </div>
+                <p class="desc">If you want to <span>logout</span> the user you can simply delete the session data.
+                </p>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-php">&lt;?php
+start_session();
+
+// clear session data and delete the session
+session_unset();
+session_destroy();
+header('location:login.php');
 
 ?></code></pre>
                 </div>
