@@ -39,14 +39,14 @@
             </div>
             <div class="col-md-6">
                 <label id="l_titles" for="titles" class="form-label mb-0">Titles</label>
-                <input type="text" class="form-control" id="titles" name="titles" required>
+                <input type="text" class="form-control" id="titles" name="titles">
                 <div class="invalid-feedback">
                 </div>
             </div>
             <div class="col-md-6">
                 <label id="l_tags" for="tags" class="form-label mb-0">Tags</label>
                 <input oninput="validate_field(this,'l_tags','Tags')" type="text" class="form-control" id="tags"
-                    name="tags" required>
+                    name="tags">
                 <div class="invalid-feedback">
                 </div>
             </div>
