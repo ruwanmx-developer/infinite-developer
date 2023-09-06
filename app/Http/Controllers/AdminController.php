@@ -94,11 +94,13 @@ class AdminController extends Controller
         Post::create([
             'name' => $request->name,
             'view_id' => $number,
-            'page_meta_data' => $request->page_meta_data,
             'link_tag' => $request->link_tag,
             'card_id' => $request->card_id,
             'description' => $request->description,
-            'created_by' =>  Auth::user()->id,
+            'titles' => $request->titles,
+            'tags' => $request->tags,
+            'state' => $request->state,
+            'user_id' =>  Auth::user()->id,
         ]);
         return redirect()->route('posts.index');
     }
@@ -115,9 +117,11 @@ class AdminController extends Controller
         $post = Post::find($request->id);
         $post->name = $request->name;
         $post->card_id = $request->card_id;
-        $post->page_meta_data = $request->page_meta_data;
         $post->description = $request->description;
         $post->link_tag = $request->link_tag;
+        $post->titles = $request->titles;
+        $post->tags = $request->tags;
+        $post->state = $request->state;
         $post->save();
         return redirect()->route('posts.index');
     }

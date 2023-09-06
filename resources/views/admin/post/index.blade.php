@@ -11,7 +11,6 @@
                     <th scope="col">Name</th>
                     <th scope="col">Card Id</th>
                     <th scope="col">View Id</th>
-                    <th scope="col">Page Meta Data</th>
                     <th scope="col">Link Tag</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -23,7 +22,6 @@
                         <td>{{ $post->name }}</td>
                         <td>{{ $post->card_id }}</td>
                         <td>{{ $post->view_id }}</td>
-                        <td>{{ $post->page_meta_data }}</td>
                         <td>{{ $post->link_tag }}</td>
                         <td>
                             <a href="{{ route('posts.edit', ['id' => $post->id]) }}"
