@@ -42,11 +42,10 @@ class AdminController extends Controller
             Card::create([
                 'name' =>  $request->name,
                 'image' =>  $filename,
-                'short_description' =>  $request->s_desc,
-                'long_description' =>  $request->l_desc,
-                'page_meta_data' =>  $request->page_meta_data,
+                'description' =>  $request->desc,
                 'link_tag' =>  $request->link_tag,
-                'created_by' =>  Auth::user()->id,
+                'state' =>  $request->state,
+                'user_id' =>  Auth::user()->id,
             ]);
         }
         return redirect()->route('cards.index');
@@ -70,10 +69,9 @@ class AdminController extends Controller
             $card->image = $filename;
         }
         $card->name = $request->name;
-        $card->short_description = $request->short_description;
-        $card->long_description = $request->long_description;
-        $card->page_meta_data = $request->page_meta_data;
+        $card->description = $request->description;
         $card->link_tag = $request->link_tag;
+        $card->state = $request->state;
         $card->save();
         return redirect()->route('cards.index');
     }

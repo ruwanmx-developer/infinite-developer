@@ -20,23 +20,9 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label id="l_s_desc" for="s_desc" class="form-label mb-0">Short Description</label>
-                <input oninput="validate_field(this,'l_s_desc','Short Description')" type="text" class="form-control"
-                    id="s_desc" name="s_desc" required>
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label id="l_l_desc" for="l_desc" class="form-label mb-0">Long Description</label>
-                <input oninput="validate_field(this,'l_l_desc','Long Description')" type="text" class="form-control"
-                    id="l_desc" name="l_desc" required>
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label id="l_page_meta_data" for="page_meta_data" class="form-label mb-0">Card Page Meta Data</label>
-                <input oninput="validate_field(this,'l_page_meta_data','Card Page Meta Data')" type="text"
-                    class="form-control" id="page_meta_data" name="page_meta_data" required>
+                <label id="l_desc" for="desc" class="form-label mb-0">Description</label>
+                <input oninput="validate_field(this,'l_desc','Description')" type="text" class="form-control"
+                    id="desc" name="desc" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
@@ -44,6 +30,15 @@
                 <label id="l_link_tag" for="link_tag" class="form-label mb-0">Card Link Tag</label>
                 <input oninput="validate_field(this,'l_link_tag','Card Link Tag')" type="text" class="form-control"
                     id="link_tag" name="link_tag" required>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="state" class="form-label mb-0">State</label>
+                <select class="form-select" name="state" id="state" required>
+                    <option value="0">Inactive</option>
+                    <option value="1">Active</option>
+                </select>
                 <div class="invalid-feedback">
                 </div>
             </div>

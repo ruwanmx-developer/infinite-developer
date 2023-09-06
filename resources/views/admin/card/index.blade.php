@@ -10,7 +10,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Image</th>
-                    <th scope="col">Page Meta Data</th>
                     <th scope="col">Link Tag</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -21,7 +20,6 @@
                         <td>{{ $card->id }}</td>
                         <td>{{ $card->name }}</td>
                         <td>{{ $card->image }}</td>
-                        <td>{{ $card->page_meta_data }}</td>
                         <td>{{ $card->link_tag }}</td>
                         <td>
                             <a href="{{ route('cards.edit', ['id' => $card->id]) }}"

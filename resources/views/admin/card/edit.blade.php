@@ -21,24 +21,9 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label id="l_s_desc" for="short_description" class="form-label mb-0">Short Description</label>
-                <input oninput="validate_field(this,'l_s_desc','Short Description')" value="{{ $card->short_description }}"
-                    type="text" class="form-control" id="short_description" name="short_description" required>
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label id="l_l_desc" for="long_description" class="form-label mb-0">Long Description</label>
-                <input oninput="validate_field(this,'l_l_desc','Long Description')" value="{{ $card->long_description }}"
-                    type="text" class="form-control" id="long_description" name="long_description" required>
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label id="l_page_meta_data" for="page_meta_data" class="form-label mb-0">Card Page Meta Data</label>
-                <input oninput="validate_field(this,'l_page_meta_data','Card Page Meta Data')"
-                    value="{{ $card->page_meta_data }}" type="text" class="form-control" id="page_meta_data"
-                    name="page_meta_data" required>
+                <label id="l_desc" for="description" class="form-label mb-0">Description</label>
+                <input oninput="validate_field(this,'l_desc','Description')" value="{{ $card->description }}" type="text"
+                    class="form-control" id="description" name="description" required>
                 <div class="invalid-feedback">
                 </div>
             </div>
@@ -46,6 +31,15 @@
                 <label id="l_link_tag" for="link_tag" class="form-label mb-0">Card Link Tag</label>
                 <input oninput="validate_field(this,'l_link_tag','Card Link Tag')" value="{{ $card->link_tag }}"
                     type="text" class="form-control" id="link_tag" name="link_tag" required>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="state" class="form-label mb-0">State</label>
+                <select class="form-select" name="state" id="state" required>
+                    <option @selected($card->state == '0') value="0">Inactive</option>
+                    <option @selected($card->state == '1') value="1">Active</option>
+                </select>
                 <div class="invalid-feedback">
                 </div>
             </div>
