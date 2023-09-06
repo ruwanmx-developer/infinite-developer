@@ -17,11 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name', 300);
             $table->string('image', 50);
-            $table->string('short_description', 300);
-            $table->string('long_description', 600);
-            $table->string('page_meta_data', 300);
             $table->string('link_tag', 300);
-            $table->smallInteger('created_by');
+            $table->string('description', 300); // meta and display
+            $table->smallInteger('user_id');
+            $table->smallInteger('state'); // 1 = active, 0 = inactive
             $table->timestamps();
         });
     }

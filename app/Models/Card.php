@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Card extends Model
 {
@@ -12,10 +13,14 @@ class Card extends Model
     protected $fillable = [
         'name',
         'image',
-        'short_description',
-        'long_description',
-        'page_meta_data',
         'link_tag',
-        'created_by',
+        'description',
+        'user_id',
+        'state'
     ];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

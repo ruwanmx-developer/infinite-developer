@@ -13,15 +13,22 @@ class Post extends Model
     protected $fillable = [
         'name',
         'view_id',
-        'page_meta_data',
         'link_tag',
-        'card_id',
         'description',
-        'created_by',
+        'card_id',
+        'titles',
+        'tags',
+        'user_id',
+        'state'
     ];
 
     public function card(): BelongsTo
     {
         return $this->belongsTo(Card::class);
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 }
