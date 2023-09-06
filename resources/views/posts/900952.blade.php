@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('meta_description', $post->page_meta_data)
+@section('meta_description', $post->description)
 @section('page_title', 'Infinite Developer | ' . $post->name)
 @section('class', 'post')
 @section('content')

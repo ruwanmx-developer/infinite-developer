@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('meta_description', $card->page_meta_data)
+@section('meta_description', $card->description)
 @section('page_title', 'Infinite Developer | ' . $card->name)
 @section('class', 'content')
 @section('content')
@@ -12,7 +12,7 @@
                         {{ $card->name }}
                     </div>
                     <div class="description">
-                        {{ $card->long_description }}
+                        {{ $card->description }}
                     </div>
                 </div>
             </div>

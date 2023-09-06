@@ -17,7 +17,7 @@
                             <img src="{{ asset('card_images/' . $card->image) }}" alt="" />
                         </div>
                         <div class="description">
-                            {{ $card->short_description }}
+                            {{ $card->description }}
                         </div>
                         <div class="btn-barx">
                             <div>
