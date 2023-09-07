@@ -39,10 +39,12 @@ class HomeController extends Controller
             ->orWhere('description', 'like', '%' . $request->key . ' %')
             ->orWhere('description', 'like', '% ' . $request->key . '%')
             ->orWhere('description', '=',  $request->key)
-            ->orWhere('page_meta_data', 'like', '% ' . $request->key . ' %')
-            ->orWhere('page_meta_data', 'like', '%' . $request->key . ' %')
-            ->orWhere('page_meta_data', 'like', '% ' . $request->key . '%')
-            ->orWhere('page_meta_data', '=',  $request->key)
+            ->orWhere('titles', 'like', '% ' . $request->key . ' %')
+            ->orWhere('titles', 'like', '%' . $request->key . ' %')
+            ->orWhere('titles', 'like', '% ' . $request->key . '%')
+            ->orWhere('tags', 'like', '% ' . $request->key . ' %')
+            ->orWhere('tags', 'like', '%' . $request->key . ' %')
+            ->orWhere('tags', 'like', '% ' . $request->key . '%')
             ->get();
         return view('search', compact(['posts']));
     }
