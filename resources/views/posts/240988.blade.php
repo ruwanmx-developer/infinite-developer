@@ -30,6 +30,12 @@
                     <pre class="line-numbers"><code class="language-batch">PAYHERE_MERCHANT_ID="xxxxxxx"
 PAYHERE_SECRET_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"</code></pre>
                 </div>
+                <h2 class="title-1">Create Database Tables</h2>
+                <p class="desc">Paste this code to create migration files in the project.</p>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-batch">php artisan make:migration create_items_table
+php artisan make:migration create_payment_records_table</code></pre>
+                </div>
             </div>
         </div>
     </div>
