@@ -18,11 +18,14 @@
             </div>
             <div class="col-12 col-md-8">
                 <div class="row">
+                    @php
+                        $count = 1;
+                    @endphp
                     @foreach ($posts as $post)
                         <div class="col-12 mb-3 px-0 px-md-3">
                             <a href="{{ $post->link_tag }}" class="link-tag">
                                 <div class="content-card">
-                                    <div class="sec c1"></div>
+                                    <div class="sec c{{ $count++ }}"></div>
                                     <div>
                                         <div class="title">{{ $post->name }}</div>
                                         <div class="desc">{{ $post->description }}</div>

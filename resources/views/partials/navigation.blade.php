@@ -8,7 +8,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+                <li class="nav-item">
+                    <a href="{{ route('learn') }}" class="nav-link">Learn</a>
+                </li>
             </ul>
             <div class="d-flex">
                 <form class="input-group d-flex" action="{{ route('search') }}" method="GET">

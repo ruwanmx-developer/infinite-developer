@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('meta_description', 'Infinite Developer | Search')
 @section('page_title', 'Infinite Developer | Search')
-@section('class', 'content')
+@section('class', 'content search')
 @section('content')
     <div class="container-fluid">
         <div class="row py-5 px-5">
