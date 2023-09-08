@@ -22,6 +22,9 @@
 
     @yield('styles')
 
+    <script>
+        let FF_FOUC_FIX;
+    </script>
 </head>
 
 <body>

@@ -21,10 +21,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('build/assets/app-93daf664.css') }}">
     <script src="{{ asset('build/assets/app-51e8fec5.js') }}"></script>
@@ -39,6 +35,9 @@
 
     @yield('styles')
 
+    <script>
+        let FF_FOUC_FIX;
+    </script>
 </head>
 
 <body class="@yield('class')">
