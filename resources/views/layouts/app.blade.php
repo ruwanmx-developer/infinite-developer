@@ -43,7 +43,9 @@
 
 <body class="@yield('class')">
     @include('partials.navigation')
-    @yield('content')
+    <div class="app">
+        @yield('content')
+    </div>
     @include('partials.footer')
 </body>
 

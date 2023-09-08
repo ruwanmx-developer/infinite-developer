@@ -6,15 +6,15 @@
     <div class="container-fluid">
         <div class="row py-5 px-5">
             <div class="col-3 side">
-                {{-- <img src="{{ asset('card_images/' . $card->image) }}" alt="">
+
                 <div>
-                    <div class="main-title">
-                        {{ $card->name }}
+                    <div class="search-title">
+                        Search Results For "<span>{{ $slug }}</span>"
                     </div>
                     <div class="description">
-                        {{ $card->long_description }}
+                        {{ $count }} results found
                     </div>
-                </div> --}}
+                </div>
             </div>
             <div class="col-9">
                 <div class="row">

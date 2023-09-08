@@ -97,7 +97,7 @@ class AdminController extends Controller
             'link_tag' => $request->link_tag,
             'card_id' => $request->card_id,
             'description' => $request->description,
-            'titles' => $request->titles,
+            'search' => $request->search,
             'tags' => $request->tags,
             'state' => $request->state,
             'user_id' =>  Auth::user()->id,
@@ -119,7 +119,7 @@ class AdminController extends Controller
         $post->card_id = $request->card_id;
         $post->description = $request->description;
         $post->link_tag = $request->link_tag;
-        $post->titles = $request->titles;
+        $post->search = $request->search;
         $post->tags = $request->tags;
         $post->state = $request->state;
         $post->save();

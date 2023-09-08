@@ -1,7 +1,11 @@
 @extends('layouts.app')
 @section('meta_description',
-    'Learn Programming through an Incredibly Easy Step-by-Step Method from Scratch. Every step
-    has been explained, allowing you to grasp concepts effortlessly and gain comprehensive knowledge.')
+    'Welcome to Infinite Developer, your ultimate destination for learning coding from scratch to
+    mastery. Learn Programming through an Incredibly Easy Step-by-Step Method from Scratch. Every step
+    has been explained, allowing you to grasp concepts effortlessly and gain comprehensive knowledge. Start your coding
+    adventure with InfiniteDeveloper today and turn your ideas
+    into
+    functional, elegant code.')
 @section('page_title', 'Infinite Developer | Home')
 @section('class', 'home')
 @section('content')
@@ -21,7 +25,7 @@
                             Your Path to Mastering Coding
                         </div>
                         <div class="desc">
-                            Welcome to InfiniteDeveloper, your ultimate destination for learning coding from scratch to
+                            Welcome to Infinite Developer, your ultimate destination for learning coding from scratch to
                             mastery.
                             Whether
                             you're a complete beginner or looking to expand your programming skills, our comprehensive and
@@ -30,7 +34,8 @@
                             learners and embark on a journey to unlock the secrets of programming languages, web
                             development,
                             app
-                            creation, and more. Start your coding adventure with InfiniteDeveloper today and turn your ideas
+                            creation, and more. Start your coding adventure with Infinite Developer today and turn your
+                            ideas
                             into
                             functional, elegant code.
                         </div>
@@ -51,8 +56,12 @@
 @section('styles')
     <style>
         .body-wrap {
-            min-height: calc(100vh - 58px - 3rem);
+            min-height: calc(100vh - var(--navbar-height) - 3rem);
             position: relative;
+        }
+
+        .app {
+            min-height: 0px;
         }
 
         .air {

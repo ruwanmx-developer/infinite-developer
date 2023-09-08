@@ -18,7 +18,7 @@
                 <label for="card_id" class="form-label mb-0">Card Id</label>
                 <select class="form-select" name="card_id" id="id">
                     @foreach ($cards as $card)
-                        <option @selected($post->id == $card->id) value="{{ $card->id }}">{{ $card->name }}</option>
+                        <option @selected($post->card_id == $card->id) value="{{ $card->id }}">{{ $card->name }}</option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">

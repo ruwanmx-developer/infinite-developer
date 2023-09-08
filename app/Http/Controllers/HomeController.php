@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Card;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -31,21 +32,18 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
-        $posts = Post::where('name', 'like', '% ' . $request->key . ' %')
-            ->orWhere('name', 'like', '%' . $request->key . ' %')
-            ->orWhere('name', 'like', '% ' . $request->key . '%')
-            ->orWhere('name', '=', $request->key)
-            ->orWhere('description', 'like', '% ' . $request->key . ' %')
-            ->orWhere('description', 'like', '%' . $request->key . ' %')
-            ->orWhere('description', 'like', '% ' . $request->key . '%')
-            ->orWhere('description', '=',  $request->key)
-            ->orWhere('titles', 'like', '% ' . $request->key . ' %')
-            ->orWhere('titles', 'like', '%' . $request->key . ' %')
-            ->orWhere('titles', 'like', '% ' . $request->key . '%')
-            ->orWhere('tags', 'like', '% ' . $request->key . ' %')
-            ->orWhere('tags', 'like', '%' . $request->key . ' %')
-            ->orWhere('tags', 'like', '% ' . $request->key . '%')
+        $slug = $request->key;
+        $keywords = explode(' ', $slug);
+        $posts = DB::table('posts')
+            ->where(function ($queryBuilder) use ($keywords) {
+                foreach ($keywords as $keyword) {
+                    $queryBuilder->orWhere('search', 'like', '%\'' . $keyword . '\'%');
+                }
+            })
+            ->orWhere('tags', 'like', '%\'' . $slug . '\'%')
+            ->orWhere('search', 'like', '% ' . $slug . ' %')
             ->get();
-        return view('search', compact(['posts']));
+        $count = count($posts);
+        return view('search', compact(['posts', 'slug', 'count']));
     }
 }

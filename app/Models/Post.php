@@ -16,7 +16,7 @@ class Post extends Model
         'link_tag',
         'description',
         'card_id',
-        'titles',
+        'search',
         'tags',
         'user_id',
         'state'

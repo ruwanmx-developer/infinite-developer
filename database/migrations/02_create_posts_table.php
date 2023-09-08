@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('link_tag', 300);
             $table->string('description', 300);
             $table->smallInteger('card_id');
-            $table->text('titles')->nullable();
+            $table->text('search')->nullable();
             $table->string('tags', 500)->nullable();
             $table->smallInteger('user_id');
             $table->smallInteger('state'); // 1 = active, 0 = inactive
