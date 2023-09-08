@@ -321,9 +321,10 @@ pre[class*="language-"] {
 }
 .post .desc {
     line-height: 19px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     color: #2e2e2e;
     font-weight: 300;
+    margin-top: 10px;
 }
 
 .post .desc span {

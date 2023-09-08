@@ -26,7 +26,7 @@ class HomeController extends Controller
 
     public function learn()
     {
-        $cards = Card::all();
+        $cards = Card::where('state', 1)->get();
         return view('learn', compact(['cards']));
     }
 
@@ -34,14 +34,17 @@ class HomeController extends Controller
     {
         $slug = $request->key;
         $keywords = explode(' ', $slug);
-        $posts = DB::table('posts')
-            ->where(function ($queryBuilder) use ($keywords) {
+        $posts = Post::where('state',  1)
+            ->whereHas('card', function ($query) {
+                $query->where('state', 1);
+            })
+            ->where(function ($queryBuilder) use ($keywords, $slug) {
                 foreach ($keywords as $keyword) {
                     $queryBuilder->orWhere('search', 'like', '%\'' . $keyword . '\'%');
                 }
+                $queryBuilder->orWhere('tags', 'like', '%' . $slug . '%');
+                $queryBuilder->orWhere('search', 'like', '% ' . $slug . ' %');
             })
-            ->orWhere('tags', 'like', '%\'' . $slug . '\'%')
-            ->orWhere('search', 'like', '% ' . $slug . ' %')
             ->get();
         $count = count($posts);
         return view('search', compact(['posts', 'slug', 'count']));

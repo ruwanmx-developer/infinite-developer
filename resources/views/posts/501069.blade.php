@@ -108,8 +108,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 import '../sass/app.scss'</code></pre>
                 </div>
                 <p class="desc">Now add <span>&#64;vite Blade Directive</span> to your layout. Paste this code into your
-                    <span>&lt;head&gt;</span>
-                </p> section.
+                    <span>&lt;head&gt;</span> section.
+                </p>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-html">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
