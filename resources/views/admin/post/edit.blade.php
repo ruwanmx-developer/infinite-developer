@@ -32,26 +32,6 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label id="l_description" for="description" class="form-label mb-0">Description</label>
-                <input oninput="validate_field(this,'l_description','Description')" value="{{ $post->description }}"
-                    type="text" class="form-control" id="description" name="description" required>
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label id="l_titles" for="titles" class="form-label mb-0">Titles</label>
-                <input type="text" class="form-control" id="titles" name="titles" value="{{ $post->titles }}">
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label id="l_tags" for="tags" class="form-label mb-0">Tags</label>
-                <input oninput="validate_field(this,'l_tags','Tags')" value="{{ $post->tags }}" type="text"
-                    class="form-control" id="tags" name="tags">
-                <div class="invalid-feedback">
-                </div>
-            </div>
-            <div class="col-md-6">
                 <label for="state" class="form-label mb-0">State</label>
                 <select class="form-select" name="state" id="state" required>
                     <option @selected($post->state == '0') value="0">Inactive</option>
@@ -60,6 +40,26 @@
                 <div class="invalid-feedback">
                 </div>
             </div>
+            <div class="col-md-12">
+                <label id="l_description" for="description" class="form-label mb-0">Description</label>
+                <textarea oninput="validate_field(this,'l_description','Description')" name="description" id="description"
+                    class="form-control" required>{{ $post->description }}</textarea>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label id="l_search" for="titles" class="form-label mb-0">Search</label>
+                <textarea oninput="validate_field(this,'l_search','Search')" name="search" id="search" class="form-control">{{ $post->search }}</textarea>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label id="l_tags" for="tags" class="form-label mb-0">Tags</label>
+                <textarea oninput="validate_field(this,'l_tags','Tags')" name="tags" id="tags" class="form-control">{{ $post->tags }}</textarea>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+
             <div class="col-md-12 d-flex justify-content-end">
                 <button class="btn btn-success" type="submit">Save</button>
             </div>
