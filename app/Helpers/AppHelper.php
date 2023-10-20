@@ -2,13 +2,8 @@
 
 namespace App\Helpers;
 
-use App\Models\Advertisement;
 use App\Models\Post;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class AppHelper
 {

@@ -22,6 +22,8 @@ class PostController extends Controller
             $view = "posts." . $post->view_id;
             if (view()->exists($view)) {
                 return view($view, compact(['post']));
+            } else {
+                return view('page-not-found');
             }
         } else {
             return view('page-not-found');
